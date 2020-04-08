@@ -1,10 +1,12 @@
-var i=0;
+var i=0, y=0, z=0;
 var dog = new doggo();
 
 function preload() {
   img1 = loadImage('1.png');
   img2 = loadImage('2.png');
   img3 = loadImage('3.png');
+  foreground = loadImage('foreground.png');
+  clouds = loadImage('clouds.png');
 }
 
 
@@ -16,7 +18,7 @@ function setup() {
 }
 
 function draw() {
-  background(200);
+  background(133,210,255);
 i+=4;	
 u=i*2;
 strokeWeight(8);	
@@ -33,6 +35,18 @@ if(i==200) dog.jump();
 if(i==580) dog.land();
 
 dog.draw();
+
+y+=8+8*(100/640);
+z++;
+image(foreground,-y,690);
+image(foreground,-y+1280,690);
+image(clouds,-z,0);
+image(clouds,-z+1280,0);
+if(y>=1280) y=0;
+if(z>=1280) z=0;
+
+
+
 }
 
 
