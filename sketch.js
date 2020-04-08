@@ -38,9 +38,9 @@ if(i==580) dog.land();
 dog.draw();
 
 
-x+=2;
-image(tree,-x+1280,480);
-if(x>=1280) x=0;
+//x+=2;
+//image(tree,-x+1280,480);
+//if(x>=1280) x=0;
 
 
 
